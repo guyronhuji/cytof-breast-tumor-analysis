@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "CyTOF analysis code for: Epigenetic Heterogeneity in Breast Tumors with Implications for Disease Diagnosis and Monitoring"
+abstract: >-
+  Jupyter notebooks and supporting Python packages implementing the single-cell
+  epigenetic CyTOF analysis reported in Furth, Riemenschneider, Arieli et al.:
+  ECDF quantile batch correction, core-histone normalization, UMAP/DBSCAN
+  subpopulation identification, XGBoost/SHAP classification, PermCell
+  permutation-calibrated signature scoring, and Vendi diversity scoring.
+authors:
+  - family-names: Ron
+    given-names: Guy
+    affiliation: "Racah Institute of Physics, The Hebrew University of Jerusalem"
+license: GPL-3.0
+repository-code: "https://github.com/guyronhuji/cytof-breast-tumor-analysis"
+keywords:
+  - CyTOF
+  - mass cytometry
+  - breast cancer
+  - epigenetics
+  - histone modifications
+  - single-cell

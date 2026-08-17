@@ -1,0 +1,20 @@
+{
+  "title": "CyTOF analysis code for: Epigenetic Heterogeneity in Breast Tumors with Implications for Disease Diagnosis and Monitoring",
+  "description": "<p>Jupyter notebooks and supporting Python packages implementing the single-cell epigenetic CyTOF analysis reported in Furth, Riemenschneider, Arieli et al. Includes ECDF quantile batch correction, core-histone normalization, UMAP/DBSCAN subpopulation identification, XGBoost/SHAP classification, PermCell permutation-calibrated signature scoring, and Vendi diversity scoring.</p><p>Raw CyTOF measurements are deposited separately at DOI 10.5281/zenodo.15336152.</p>",
+  "license": "GPL-3.0-or-later",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Ron, Guy",
+      "affiliation": "Racah Institute of Physics, The Hebrew University of Jerusalem"
+    }
+  ],
+  "keywords": ["CyTOF", "mass cytometry", "breast cancer", "epigenetics", "histone modifications", "single-cell"],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.15336152",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    }
+  ]
+}
