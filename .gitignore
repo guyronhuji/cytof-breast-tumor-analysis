@@ -1,0 +1,35 @@
+# Keep this repo notebooks-only.
+# Data, figures and generated files are deliberately not tracked.
+
+*.csv
+*.tsv
+*.parquet
+*.fcs
+*.h5
+*.h5ad
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.zip
+
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+*.eps
+
+Plots/
+plots/
+Data/
+data/
+output/
+outputs/
+results/
+
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/

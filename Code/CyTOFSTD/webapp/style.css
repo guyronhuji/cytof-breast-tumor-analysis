@@ -1,0 +1,456 @@
+/*
+ * CyTOF WebApp - Scientific Dark Dashboard Theme
+ * High contrast, data-focused design for research scientists
+ */
+
+:root {
+  /* Color system - dark scientific theme */
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #21262d;
+  --bg-elevated: #1c2128;
+  
+  /* Accent colors - scientific precision */
+  --accent-primary: #00d4b1;
+  --accent-secondary: #58a6ff;
+  --accent-tertiary: #d2a8ff;
+  --accent-warning: #f0883e;
+  --accent-error: #f85149;
+  --accent-success: #3fb950;
+  
+  /* Text colors - high contrast */
+  --text-primary: #f0f6fc;
+  --text-secondary: #8b949e;
+  --text-muted: #6e7681;
+  
+  /* Borders */
+  --border-subtle: rgba(0, 212, 177, 0.1);
+  --border-medium: rgba(0, 212, 177, 0.25);
+  --border-strong: rgba(0, 212, 177, 0.4);
+}
+
+/* Global styles */
+.main {
+  background-color: var(--bg-primary) !important;
+}
+
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+}
+
+h1 {
+  font-size: 1.75rem !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 0.5rem !important;
+}
+
+h2 {
+  font-size: 1.25rem !important;
+  letter-spacing: -0.01em !important;
+}
+
+h3 {
+  font-size: 0.95rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: var(--text-secondary) !important;
+  font-weight: 500 !important;
+}
+
+p, li {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  color: var(--text-primary) !important;
+}
+
+code, pre {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+  background: rgba(0, 212, 177, 0.08) !important;
+  color: var(--accent-primary) !important;
+  border-radius: 4px !important;
+  padding: 0.15em 0.4em !important;
+}
+
+/* Metric cards */
+div[data-testid="stMetric"] {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 8px !important;
+  padding: 1rem 1.25rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+div[data-testid="stMetric"]:hover {
+  border-color: var(--border-medium) !important;
+  box-shadow: 0 4px 12px rgba(0, 212, 177, 0.1) !important;
+}
+
+div[data-testid="stMetricLabel"] p {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.65rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 0.25rem !important;
+}
+
+div[data-testid="stMetricValue"] > div {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 1.85rem !important;
+  font-weight: 700 !important;
+  color: var(--accent-primary) !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Buttons */
+button[kind="primary"] {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, #00b894 100%) !important;
+  border: none !important;
+  color: var(--bg-primary) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 600 !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  border-radius: 6px !important;
+  padding: 0.6rem 1.2rem !important;
+  box-shadow: 0 2px 8px rgba(0, 212, 177, 0.3) !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+button[kind="primary"]:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0, 212, 177, 0.4) !important;
+  opacity: 1 !important;
+}
+
+button[kind="secondary"] {
+  background: transparent !important;
+  border: 1px solid var(--border-medium) !important;
+  color: var(--accent-primary) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 500 !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.03em !important;
+  border-radius: 6px !important;
+  padding: 0.55rem 1rem !important;
+  transition: background 0.2s ease, border-color 0.2s ease !important;
+}
+
+button[kind="secondary"]:hover {
+  background: rgba(0, 212, 177, 0.08) !important;
+  border-color: var(--border-strong) !important;
+}
+
+/* Form elements */
+.stSelectbox, .stMultiSelect, .stSlider, .stNumberInput, .stTextInput {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 6px !important;
+}
+
+.stSelectbox label p, .stMultiSelect label p, .stSlider label p,
+.stNumberInput label p, .stTextInput label p {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.68rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: var(--text-secondary) !important;
+  margin-bottom: 0.4rem !important;
+}
+
+.stSelectbox select, .stMultiSelect div[data-baseweb="select"] input {
+  background: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border: none !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.stTextInput input {
+  background: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border: none !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+  background: var(--bg-secondary) !important;
+  border-right: 1px solid var(--border-subtle) !important;
+  width: 280px !important;
+}
+
+/* Tabs */
+.stTabs [data-testid="stTabContent"] {
+  background: transparent !important;
+  border: none !important;
+}
+
+.stTabs [data-testid="stTab"] {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-bottom: none !important;
+  border-radius: 6px 6px 0 0 !important;
+  padding: 0.6rem 1rem !important;
+  margin-right: 4px !important;
+}
+
+.stTabs [data-testid="stTab"][aria-selected="true"] {
+  background: var(--bg-primary) !important;
+  border-color: var(--accent-primary) !important;
+  border-bottom: 2px solid var(--accent-primary) !important;
+}
+
+.stTabs [data-testid="stTab"] p {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.7rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: var(--text-secondary) !important;
+}
+
+.stTabs [data-testid="stTab"][aria-selected="true"] p {
+  color: var(--accent-primary) !important;
+}
+
+/* Dataframes */
+.stDataFrame {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+.stDataFrame table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+}
+
+.stDataFrame th {
+  background: var(--bg-tertiary) !important;
+  color: var(--text-secondary) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.68rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding: 0.6rem 0.8rem !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+.stDataFrame td {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.82rem !important;
+  padding: 0.5rem 0.8rem !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+.stDataFrame tr:hover td {
+  background: var(--bg-elevated) !important;
+}
+
+/* Expander (scoped) */
+div[data-testid="stExpander"] summary {
+  background: var(--bg-tertiary) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 6px !important;
+}
+
+/* Plotly charts */
+.js-plotly-plot {
+  background: var(--bg-secondary) !important;
+  border-radius: 8px !important;
+}
+
+/* Custom components */
+.cytof-header {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.cytof-header h1 {
+  margin: 0 !important;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  font-size: 2rem !important;
+}
+
+.cytof-header .subtitle {
+  color: var(--text-secondary) !important;
+  font-size: 0.9rem !important;
+  margin-top: 0.5rem !important;
+  font-weight: 400 !important;
+}
+
+.cytof-card {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 10px !important;
+  padding: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+.cytof-card:hover {
+  border-color: var(--border-medium) !important;
+  box-shadow: 0 4px 20px rgba(0, 212, 177, 0.08) !important;
+}
+
+.cytof-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.65rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+.cytof-badge-success {
+  background: rgba(63, 185, 80, 0.15) !important;
+  color: #3fb950 !important;
+  border: 1px solid rgba(63, 185, 80, 0.4) !important;
+}
+
+.cytof-badge-warning {
+  background: rgba(240, 136, 62, 0.15) !important;
+  color: #f0883e !important;
+  border: 1px solid rgba(240, 136, 62, 0.4) !important;
+}
+
+.cytof-badge-error {
+  background: rgba(248, 81, 73, 0.15) !important;
+  color: #f85149 !important;
+  border: 1px solid rgba(248, 81, 73, 0.4) !important;
+}
+
+.cytof-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--border-medium) 50%, transparent 100%);
+  margin: 2rem 0;
+  border: none;
+}
+
+/* Info box */
+.cytof-info {
+  background: rgba(88, 166, 255, 0.08) !important;
+  border-left: 3px solid var(--accent-secondary) !important;
+  border-radius: 0 6px 6px 0 !important;
+  padding: 1rem 1.25rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.cytof-info p {
+  color: var(--text-primary) !important;
+  font-size: 0.85rem !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+/* Warning box */
+.cytof-warning {
+  background: rgba(240, 136, 62, 0.08) !important;
+  border-left: 3px solid var(--accent-warning) !important;
+  border-radius: 0 6px 6px 0 !important;
+  padding: 1rem 1.25rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.cytof-warning p {
+  color: var(--text-primary) !important;
+  font-size: 0.85rem !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+/* Section headers */
+.cytof-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cytof-section-header h3 {
+  margin: 0 !important;
+  color: var(--accent-primary) !important;
+  font-size: 0.82rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  font-weight: 600 !important;
+}
+
+.cytof-section-header .icon {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* Navigation grid */
+.cytof-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cytof-nav-item {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cytof-nav-item:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 212, 177, 0.15);
+}
+
+.cytof-nav-item .icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.cytof-nav-item .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cytof-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  h1 {
+    font-size: 1.5rem !important;
+  }
+}
